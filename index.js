@@ -30,16 +30,3 @@ app.post("/logs", async (req, res) => {
     await userLogdb.insertOne(req.body);
     res.json(" Added ");
   });
-
-
-
-
-//          Log Delete
-
-app.delete("/", async (req, res) => {
-  await userLogdb.findOneAndDelete(req.query)
-  res.json('Be gone fool')
-})
-
-
-//          Log Update
